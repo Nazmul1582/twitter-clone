@@ -1,3 +1,28 @@
+<h1 align="center">Twitter Clone</h1>
+<br />
+
+- Twitter Clone
+
+![twitter clone](./public/twitter-clone.png)
+
+- Make a Tweet
+
+![Make a Tweet](./public/make%20a%20tweet.png)
+
+- Add emoji on tweet
+
+![Add emoji on tweet](./public/add%20emoji%20on%20tweet.png)
+
+- Single post page
+
+![Single post page](./public/singlePost%20page.png)
+
+- Comment in a tweet
+
+![Comment in a tweet](./public/comment%20in%20a%20tweet.png)
+
+<br />
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
