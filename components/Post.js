@@ -64,7 +64,6 @@ export default function Post({ id, post }) {
       post,
       postId: id,
     });
-    console.log("opening model", appContext.post);
   };
 
   return (
@@ -140,7 +139,7 @@ export default function Post({ id, post }) {
             >
               {liked ? (
                 <div className="hover:bg-pink-600/10 hover:text-pink-600 rounded-full p-2">
-                  <AiFillHeart className="h-5 w-5 " />
+                  <AiFillHeart className="h-5 w-5 text-pink-600" />
                 </div>
               ) : (
                 <div className="hover:bg-pink-600/10 hover:text-pink-600 rounded-full p-2">
@@ -149,9 +148,7 @@ export default function Post({ id, post }) {
               )}
 
               {likes.length > 0 && (
-                <span
-                  className={`${liked && "text-pink-700"} text-sm text-black`}
-                >
+                <span className={`${liked && "text-pink-700"} text-sm`}>
                   {likes.length}
                 </span>
               )}

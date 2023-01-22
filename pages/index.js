@@ -1,6 +1,5 @@
 import Head from "next/head";
-import { Inter } from "@next/font/google";
-import { useSession } from "next-auth/react";
+import { getSession, useSession } from "next-auth/react";
 import Login from "../components/Login";
 import Sidebar from "../components/Sidebar";
 import Feed from "../components/Feed";
@@ -9,10 +8,8 @@ import Modal from "@/components/Modal";
 import { useContext } from "react";
 import { AppContext } from "@/contexts/AppContext";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export default function Home() {
-  const { appContext } = useContext(AppContext);
+  const [appContext] = useContext(AppContext);
   const { data: session } = useSession();
   if (!session) return <Login />;
 
@@ -34,4 +31,14 @@ export default function Home() {
       </main>
     </>
   );
+}
+
+export async function getServerSideProps(context) {
+  const session = await getSession(context);
+
+  return {
+    props: {
+      session,
+    },
+  };
 }
